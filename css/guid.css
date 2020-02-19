@@ -1,0 +1,20 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0 auto;
+  width: 100vw;
+  background-color: #FCFCFC;
+  color: #464646;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  letter-spacing: 0.08em;
+}
