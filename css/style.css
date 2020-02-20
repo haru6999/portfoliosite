@@ -23,3 +23,14 @@ p {
 .letter-accent {
   background: linear-gradient(#fff 70%,#ffe243 0);
 }
+
+.widthwise {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widthwise-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
