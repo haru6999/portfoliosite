@@ -75,9 +75,12 @@
     display: inherit;
   }
 
-  .card-body-widthwise img {
+  .card-body .widthwise img, .card-body .widthwise-reverse img {
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 25px;
+    margin: 0 0 25px 0;
+  }
+
+  .card-body-sentence {
+    width: 100%;
   }
 }
