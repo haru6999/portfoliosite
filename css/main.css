@@ -11,7 +11,7 @@
 }
 
 .content {
-  margin: 0 10%;
+  margin: 0 15%;
 }
 
 @media screen and (max-width:480px) {
@@ -23,6 +23,10 @@
 
   .title {
     font-size: 100%;
+  }
+
+  .content {
+    margin: 0 8%;
   }
 }
 

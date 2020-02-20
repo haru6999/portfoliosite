@@ -1,18 +1,12 @@
 .card-container-half {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .card-container-half .card {
-  width: 44%;
-}
-
-@media screen and (max-width:480px) {
-  .card-container-half .card {
-    width: 100%;
-  }
+  width: 46%;
 }
 
 .card {
@@ -21,7 +15,7 @@
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   background-color: white;
   width: 100%;
-  margin-bottom: 8vw;
+  margin-bottom: 5vw;
   z-index: 5;
 }
 
@@ -41,5 +35,45 @@
 }
 
 .card-body {
-  padding: 25px;
+  padding: 20px 25px;
+}
+
+.card-body p {
+  margin-bottom: 14px;
+}
+
+.card-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card-body-widthwise {
+  display: flex;
+}
+
+.card-body-widthwise img {
+  width: 40%;
+  margin-right: 25px;
+  object-fit: cover;
+}
+
+.card-body-widthwise-sentence {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width:480px) {
+  .card-container-half .card {
+    width: 100%;
+  }
+
+  .card-body-widthwise {
+    display: inherit;
+  }
+
+  .card-body-widthwise img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
 }

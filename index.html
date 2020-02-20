@@ -14,9 +14,10 @@
   <body>
     <img src="image/freee-mv.png" alt="リデザインのプロトタイプが載っているメインビジュアル" class="mainvisual">
     <h1 class="title">
-      既存アプリ「freee」のリデザイン<br>
+      既存アプリのリデザイン<br>
       〜経費申請をより効率化する〜
     </h1>
+    <!-- 既存サービスの説明入れる -->
     <section class="content">
       <div class="card-container-half">
         <div class="card">
@@ -37,10 +38,12 @@
           </div>
           <div class="card-body">
             <p>
-              「いつ」…思い出したら、スケジュールに空きがあるとき、<span class="letter-accent">月末にまとめて</span>申請する。<br>
-              「どこで」…オフィスの自席で申請する。<br>
-              「どのデバイスで」…交通費はスマホ、<span class="letter-accent">交通費以外はpc</span>。<br>
-              その他にも申請を忘れてたり、pcでドキュメントを並べながら入力する、領収書をスマホで撮影しpcへ取り込んでから入力することがわかりました。
+              いつ…思い出したら、スケジュールに空きがあるとき、<span class="letter-accent">月末にまとめて</span>申請する。<br>
+              どこで…オフィスの自席で申請する。<br>
+              どのデバイスで…交通費はスマホ、<span class="letter-accent">交通費以外はPC</span>。
+            </p>
+            <p>
+              その他にも申請を忘れてたり、PCでドキュメントを並べながら入力する、領収書をスマホで撮影しpcへ取り込んでから入力することがわかりました。
             </p>
           </div>
         </div>
@@ -52,8 +55,12 @@
           </div>
           <div class="card-body">
             <p>
-              領収書を取れる状況でない、すぐやる意識がない、pcで申請したいということから来る「<span class="letter-accent">入力の後回し</span>」と<br>
+              領収書を取れる状況でない、すぐやる意識がない、PCで申請したいということから来る「<span class="letter-accent">入力の後回し</span>」と、
               自分が把握しておかなければいけない項目があることから来る「<span class="letter-accent">入力の遅延</span>」が起こっていることがわかりました。
+            </p>
+            <p>
+              入力を後回しにすると申請自体を<span class="letter-accent">忘れてしまう可能性</span>、<span class="letter-accent">後日その日の予定を思い出す手間</span>があります。<br>
+              また、ドキュメントの内容が<span class="letter-accent">何枚にも渡っている</span>ため入力に遅延が起こっていると考えました。
             </p>
           </div>
         </div>
@@ -61,17 +68,40 @@
           <div class="card-header">
             4.WireDesign
           </div>
+          <img src="image/freee-WireFrame.jpg" alt="ワイヤー設計の画像">
           <div class="card-body">
-            <p>a</p>
+            <p>
+              申請に必要な情報を全て記入しなくても、今記入できる範囲で記入しておくことができるワイヤーを設計しました。
+            </p>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header card-header-accent">
-          5.UIdesign
+          5.Prototype#1
         </div>
         <div class="card-body">
-          
+          <div class="card-body-widthwise">
+            <img src="image/freee-Prototype1.png" alt="プロトタイプ第1案。アプリファーストビューの画像">
+            <div class="card-body-widthwise-sentence">
+              <p>
+                領収書が出たタイミングで「経費申請した」を押し<span class="letter-accent">タスクとして登録</span>することができます。申請忘れや思い出すという手間を省けることを意図しました。<br>
+                申請タスクからは詳細の追加や領収書の追加を好きなタイミングですることができます。
+              </p>
+              <p>
+                また、申請したものを同じ階層に置くことで、経費申請したものが承認されたかのステータスを<span class="letter-accent">一目で確認できます</span>。
+              </p>
+            </div>
+          </div>
+          <div class="card-body-widthwise">
+            <div class="card-body-widthwise-sentence">
+              <p>
+                会社独自のドキュメントを読まなくても入力ができるよう、その人に合った内容を提供。<br>
+                書く内容がわからず外部ファイルのドキュメントを見に行く手間を省いた。
+              </p>
+            </div>
+            <img src="image/freee-Prototype1-2.png" alt="プロトタイプ第1案。申請内容の画像">
+          </div>
         </div>
       </div>
       <div class="card-container-half">
@@ -80,7 +110,14 @@
             6.UserTest
           </div>
           <div class="card-body">
-            <p>a</p>
+            <p>
+              アプリを開いたときにどこを押せばいいかわからすしばらくの間止まっていた。<br>
+              「経費申請した」を<span class="letter-accent">押されなかった</span>。
+            </p>
+            <p>
+              「申請経路、承認者、部門がわからない場合」は<span class="letter-accent">押されなかった</span>。<br>
+              それぞれの項目の中でどれだかわからないけどこれかな、と選んでいた。スマホでの入力はここで終わり、PCのドキュメントを見に行く。
+            </p>
           </div>
         </div>
         <div class="card">
@@ -88,16 +125,42 @@
             7.Analysis
           </div>
           <div class="card-body">
-            <p>a</p>
+            <p>
+              ユーザーはアプリを開くとき時は<span class="letter-accent">経費申請するという気持ち</span>で開いているので、「申請する」と「経費申請した」があったら「申請する」を押す。<br>
+              また、経費申請ではなく経費精算だという文言の間違いがあった。
+            </p>
+            <p>
+              「申請経路がわからない場合」が活用れなかったのは、ヘルプが対応項目の下に来てしまっていることが原因で気づかなかったと考えた。<br>
+              また、ユーザーはヘルプを見て自分に合った項目内容を覚え、また項目一覧に戻り項目を選び、内容を選択することをしなければならない。<span class="letter-accent">ユーザーに考えさせる時間が長すぎる</span>と判断しました。
+            </p>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header card-header-accent">
-          8.Prototype
+          8.Prototype#2
         </div>
         <div class="card-body">
-          
+          <div class="card-body-widthwise">
+            <img src="image/freee-Prototype2.png" alt="プロトタイプ第2案。アプリファーストビューの画像">
+            <div class="card-body-widthwise-sentence">
+              <p>
+                経費申請をするために<span class="letter-accent">ユーザーがアクションを起こした時に自動で</span>タスクとして管理（スマホで領収書だけ撮影した時やタイトルを入力した時など）。<br>
+                それに伴い「経費申請した」を無くし、ユーザーが「申請タスク」から「下書きリスト」に変更しました。
+              </p>
+              <p>
+                また、分析で分かったユーザーの意識よりボタンの文言を「申請する」から「経費精算する」に変更しました。
+              </p>
+            </div>
+          </div>
+          <div class="card-body-widthwise">
+            <div class="card-body-widthwise-sentence">
+              <p>
+                ユーザーの動きに合わせ、それぞれの項目の中にヘルプを設置した。
+              </p>
+            </div>
+            <img src="image/freee-Prototype2-2.png" alt="プロトタイプ第2案。申請内容の画像">
+          </div>
         </div>
       </div>
       <div class="card-container-half">
@@ -120,7 +183,7 @@
       </div>
       <div class="card">
         <div class="card-header card-header-accent">
-          11.Prototype
+          11.Prototype#3
         </div>
         <div class="card-body">
           
