@@ -33,12 +33,6 @@ p {
 .widthwise > * {
   width: 48%;
 }
-/* 
-.widthwise-reverse {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-} */
 
 @media screen and (max-width:480px) {
   .widthwise > * {
