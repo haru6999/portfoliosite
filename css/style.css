@@ -27,10 +27,21 @@ p {
 .widthwise {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.widthwise > * {
+  width: 48%;
+}
+/* 
 .widthwise-reverse {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
+} */
+
+@media screen and (max-width:480px) {
+  .widthwise > * {
+    width: 100%;
+  }
 }
