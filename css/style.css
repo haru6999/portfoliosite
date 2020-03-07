@@ -1,14 +1,35 @@
+:root{
+  --text: #535354;
+  --gray: #F4F4F4;
+  --pink: #FDA8A8;
+  --lblue: #E0F1FC;
+  --blue:#5C7DBF;
+  --dblue:#25324D;
+}
+
+/* font */
+@font-face {
+  font-family: 'Phenomena-Bold';
+  src:url('../fonts/Phenomena-Bold.woff');
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  color: var(--text);
+  /* font-family: "ヒラギノ角ゴ ProN W3",sans-serif; */
 }
 
 html, body {
   margin: 0 auto;
   width: 100vw;
-  background-color: #FCFCFC;
+  /* background-color: #FCFCFC; */
   color: #464646;
   font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -32,6 +53,10 @@ p {
 
 .widthwise > * {
   width: 48%;
+}
+
+.widthwise.align-center {
+  align-items: center;
 }
 
 @media screen and (max-width:480px) {
