@@ -24,7 +24,7 @@ header {
 }
 
 #top {
-  height: 85vh;
+  height: calc(100vh - 100px);
   position: relative;
 }
 
@@ -57,10 +57,10 @@ header {
 
 .content-header {
   font-family: 'Phenomena-Bold';
-  font-size: 5vw;
+  font-size: 50px;
   letter-spacing: 0.2em;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .mainvisual {
