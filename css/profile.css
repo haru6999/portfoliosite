@@ -24,12 +24,12 @@
 }
 
 .profile-text p {
-  font-size: 2vw;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
 .profile-text .profile-text-name {
-  font-size: 3vw;
+  font-size: 20px;
 }
 
 .profile-text table tr td:first-child {

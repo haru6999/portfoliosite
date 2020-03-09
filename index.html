@@ -11,6 +11,7 @@
     <link href="./css/main.css" rel="stylesheet" type="text/css">
     <link href="./css/profile.css" rel="stylesheet" type="text/css">
     <link href="./css/skills.css" rel="stylesheet" type="text/css">
+    <link href="./css/works.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
@@ -57,28 +58,27 @@
             </div>
           </div>
         </div>
-        <div id="canvas-container-bottom">
-          <canvas id="sineCanvas-bottom"></canvas>
-        </div>
       </div>
       <div id="skills">
+        <div id="canvas-container-skills">
+          <canvas id="sineCanvas-skills"></canvas>
+        </div>
         <div class="content">
           <p class="content-header">SKILLS</p>
-          <div class="card-container">
-            <div class="card">
-              <div class="card-illust">
-                <div class="card-illust-rate"></div>
-                <img src="./image/illustrator.svg" alt="illustratorのロゴ">
-              </div>
-              <div class="card-text">
-                <p>illustrator</p>
-                <p calss="card-text-detail">80%</p>
-              </div>
-            </div>
-          </div>
-        </pc>
+          <div class="card-container" id="cardContainer"></div>
+        </div>
+      </div>
+      <div id="works">
+        <div id="canvas-container-works">
+          <canvas id="sineCanvas-works"></canvas>
+        </div>
+        <div class="content">
+          <p class="content-header">WORKS</p>
+          <div class="thumbnail-container" id="thumbnailContainer"></div>
+        </div>
       </div>
     </main>
+    <script src="js/main.js"></script>
+    <script src="js/wave.js"></script>
   </body>
-  <script src="js/wave.js"></script>
 </html>

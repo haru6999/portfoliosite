@@ -1,3 +1,4 @@
+#canvas-container-skills,
 #skills .content {
   background-color: var(--lblue);
 }
@@ -11,6 +12,7 @@
 #skills .card {
   width: 22%;
   padding: 15px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 10px;
   background-color: white;
@@ -23,33 +25,84 @@
 }
 
 #skills .card-illust {
+  /* calc(.contentのpaddingを引いた横幅/(100/cardの横幅)-cardのpaddingとborderの合計 - 任意の数字) */
+  width: calc(76vw/(100 / 22) - 50px - 30px);
+  height: calc(76vw/(100 / 22) - 50px - 30px);
+  border-radius: 50%;
+  background: white;
+  background-image: linear-gradient(to right, transparent 50%, var(--pink) 0);
+  margin: 0 auto;
   position: relative;
-  padding: 20px 0;
 }
 
 #skills .card-illust:before {
   content: '';
-  position: absolute;
-  /* width: calc(76vw/(100 / 22));
-  height: calc(76vw/(100 / 22)); */
-  width: 150px;
-  height: 150px;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  border: 10px solid var(--pink);
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
   background-color: rgba(0,0,0,0);
-  z-index: 1;
+  transform-origin: left;
+  background: white;
+}
+
+#skills .r10.card-illust:before {
+  transform: rotate(36deg);
+}
+#skills .r20.card-illust:before {
+  transform: rotate(72deg);
+}
+#skills .r30.card-illust:before {
+  transform: rotate(108deg);
+}
+#skills .r40.card-illust:before {
+  transform: rotate(144deg);
+}
+#skills .r50.card-illust:before {
+  transform: rotate(180deg);
+}
+#skills .r60.card-illust:before {
+  background-color: var(--pink);
+  transform: rotate(36deg);
+}
+#skills .r70.card-illust:before {
+  background-color: var(--pink);
+  transform: rotate(72deg);
+}
+#skills .r80.card-illust:before {
+  background-color: var(--pink);
+  transform: rotate(108deg);
+}
+#skills .r90.card-illust:before {
+  background-color: var(--pink);
+  transform: rotate(144deg);
+}
+#skills .r100.card-illust:before {
+  background-color: var(--pink);
+  transform: rotate(180deg);
 }
 
 #skills .card-illust:after {
+  content: '';
   position: absolute;
+  /* calc(.contentのpaddingを引いた横幅/(100/cardの横幅)-cardのpaddingとborderの合計 - 任意の数字 - 任意のborderの太さ) */
+  width: calc(76vw/(100 / 22) - 50px - 30px - 20px);
+  height: calc(76vw/(100 / 22) - 50px - 30px - 20px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background-color: white;
 }
 
 #skills .card-illust img {
-  width: 30%;
+  width: 50%;
   text-align: center;
   z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 #skills .card-text {
@@ -57,16 +110,28 @@
 }
 
 #skills .card-text p {
-  
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#skills .card-text-detail {
-  
+#skills .card-text .card-text-detail {
+  font-size: 16px;
+  font-weight: 200;
 }
 
 
 @media screen and (max-width:480px) {
   #skills .card {
-  width: 48%;
+    width: 48%;
+  }
+
+  #skills .card-illust {
+    width: calc(84vw/(100 / 48) - 50px - 30px);
+    height: calc(84vw/(100 / 48) - 50px - 30px);
+  }
+
+  #skills .card-illust:after {
+    width: calc(84vw/(100 / 48) - 50px - 30px - 20px);
+    height: calc(84vw/(100 / 48) - 50px - 30px - 20px);
   }
 }

@@ -15,7 +15,7 @@ header {
 .header-item {
   margin-left: 4vw;
   font-family: 'Phenomena-Bold';
-  font-size: 30px;
+  font-size: 2vw;
   letter-spacing: 0.2em;
 }
 
@@ -49,13 +49,10 @@ header {
 }
 
 #canvas-container-top,
-#canvas-container-bottom {
+#canvas-container-skills,
+#canvas-container-works {
   width: 100vw;
   height: 100px;
-}
-
-#sineCanvas-bottom {
-  background-color: var(--lblue);
 }
 
 .content-header {
@@ -65,9 +62,6 @@ header {
   text-align: center;
   margin-bottom: 30px;
 }
-
-
-
 
 .mainvisual {
   margin-bottom: 30px;
@@ -97,6 +91,6 @@ header {
   }
 
   .content {
-    margin: 0 8%;
+    padding: 0 8%;
   }
 }
