@@ -1,3 +1,4 @@
+/* header */
 header {
   width: 100%;
   height: 50px;
@@ -5,24 +6,50 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   padding: 0 20px;
   z-index: 100;
 }
 
-.header-item {
+header .nav {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 20px;
+}
+
+header .nav img {
+  width: auto;
+  height: 96%;
+}
+
+header .nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
   margin-left: 4vw;
   font-family: 'Phenomena-Bold';
   font-size: 2vw;
   letter-spacing: 0.2em;
 }
 
-.header-item:first-child {
+.nav-item:first-child {
   margin-left: 0;
 }
 
+/* footer */
+footer p {
+  color: white;
+  background-color: var(--blue);
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* top */
 #top {
   height: calc(100vh - 100px);
   position: relative;
@@ -48,11 +75,19 @@ header {
   transform: translate(-50%,-50%);
 }
 
+/* canvas */
 #canvas-container-top,
 #canvas-container-skills,
-#canvas-container-works {
+#canvas-container-works,
+#canvas-container-footer {
   width: 100vw;
   height: 100px;
+}
+
+/* content */
+
+.content {
+  padding: 0 12% 50px;
 }
 
 .content-header {
@@ -75,11 +110,11 @@ header {
   margin: 0 10% 5vw;
 }
 
-.content {
-  padding: 0 12%;
-}
-
 @media screen and (max-width:480px) {
+  header {
+    height: 30px;
+  }
+
   .mainvisual {
     width: 100%;
     height: 250px;

@@ -1,5 +1,5 @@
 #works .content {
-  padding: 0 6%;
+  padding: 0 6% 50px;
 }
 
 .thumbnail-container {
@@ -68,7 +68,7 @@
 }
 
 .thumbnail-caption {
-  font-size:25px;
+  font-size:22px;
   font-weight: bold;
   text-align: center;
   color: #fff;

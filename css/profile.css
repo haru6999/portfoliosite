@@ -24,15 +24,54 @@
 }
 
 .profile-text p {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
 .profile-text .profile-text-name {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .profile-text table tr td:first-child {
   vertical-align: top;
   padding-right: 20px;
+}
+
+.profile-text table {
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #bbb;
+  padding: 15px;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+}
+
+.button.github:hover {
+  background-color: #1d1b1b;
+}
+
+.button.note:hover {
+  background-color: #4ac7b3;
+}
+
+.button-img {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#profile .widthwise {
+  justify-content: space-around;
+}
+
+#profile .widthwise .button {
+  width: 40%;
+}
+
+@media screen and (max-width:480px) {
+  #profile .widthwise .button {
+    width: 40%;
+  }
 }

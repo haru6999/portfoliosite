@@ -1,7 +1,7 @@
 (function () {
 
   var unit = 100,
-    canvas, context, canvas2, context2, canvas3, context3,
+    canvas, context, canvas2, context2, canvas3, context3, canvas4, context4,
     height, width, xAxis, yAxis,
     draw;
 
@@ -18,6 +18,10 @@
     canvas3.width = document.documentElement.clientWidth;
     canvas3.height = 100;
     context3 = canvas3.getContext("2d");
+    canvas4 = document.getElementById("sineCanvas-footer");
+    canvas4.width = document.documentElement.clientWidth;
+    canvas4.height = 100;
+    context4 = canvas4.getContext("2d");
     height = canvas.height;
     width = canvas.width;
     xAxis = Math.floor(height/2);
@@ -35,6 +39,8 @@
     drawWaveSkills('#5C7DBF', 1, 1.6, 100);
     context3.clearRect(0, 0, width, height);
     drawWaveWorks('#E0F1FC', 1, 2, 120);
+    context4.clearRect(0, 0, width, height);
+    drawWaveFooter('#5C7DBF', 1, 2, 100);
     draw.seconds = draw.seconds + .014;
     draw.t = draw.seconds*Math.PI;
     setTimeout(draw, 35);
@@ -76,18 +82,31 @@
     context3.fill();
   }
 
+  function drawWaveFooter(color, alpha, zoom, delay) {
+    context4.fillStyle = color;
+    context4.globalAlpha = alpha;
+    context4.beginPath();
+    drawSine(draw.t / 1.5, zoom, delay);
+    context4.lineTo(width + 10, height);
+    context4.lineTo(0, height);
+    context4.closePath();
+    context4.fill();
+  }
+
   function drawSine(t, zoom, delay) {
     var x = t;
     var y = Math.sin(x)/zoom;
     context.moveTo(yAxis, unit*y+xAxis);
     context2.moveTo(yAxis, unit*y+xAxis);
     context3.moveTo(yAxis, unit*y+xAxis);
+    context4.moveTo(yAxis, unit*y+xAxis);
     for (i = yAxis; i <= width + 10; i += 10) {
       x = t+(-yAxis+i)/unit/zoom;
       y = Math.sin(x - delay)/3;
       context.lineTo(i, unit*y+xAxis);
       context2.lineTo(i, unit*y+xAxis);
       context3.lineTo(i, unit*y+xAxis);
+      context4.lineTo(i, unit*y+xAxis);
     }
   }
   init();

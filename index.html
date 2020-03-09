@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>ごとうはるかのポートフォリオサイト</title>
     <meta name="keywords" content="ポートフォリオサイト,ポートフォリオ" />
+    <link rel="shortcut icon" href="./image/icon.png">
     <meta name="description" content="ごとうはるかのポートフォリオサイト" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -15,9 +16,16 @@
   </head>
   <body>
     <header>
-      <p class="header-item"><a href="#profile">PLOFILE</a></p>
-      <p class="header-item"><a href="#skills">SKILLS</a></p>
-      <p class="header-item"><a href="#works">WORKS</a></p>
+      <div class="nav">
+        <a href="index.html">
+          <img src="./image/icon.png" alt="いるかのアイコン">
+        </a>
+      </div>
+      <div class="nav-list">
+        <p class="nav-item"><a href="#profile">PLOFILE</a></p>
+        <p class="nav-item"><a href="#skills">SKILLS</a></p>
+        <p class="nav-item"><a href="#works">WORKS</a></p>
+      </div>
     </header>
     <main>
       <div id="top">
@@ -55,6 +63,18 @@
                   <td>freee株式会社 1weekインターン</td>
                 </tr>
               </table>
+              <div class="widthwise">
+                <div class="button github">
+                  <a href="https://github.com/haru6999" target="_blank">
+                    <img src="./image/github.png" alt="github" class="button-img">
+                  </a>
+                </div>
+                <div class="button note">
+                  <a href="https://note.com/haruka_san" target="_blank">
+                    <img src="./image/note.png" alt="note" class="button-img">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -78,6 +98,12 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div id="canvas-container-footer">
+        <canvas id="sineCanvas-footer"></canvas>
+      </div>
+      <p>© 2020 Haruka Goto</p>
+    </footer>
     <script src="js/main.js"></script>
     <script src="js/wave.js"></script>
   </body>
