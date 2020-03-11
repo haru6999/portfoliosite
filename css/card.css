@@ -25,8 +25,8 @@
 
 .card-header {
   border-radius: 10px 10px 0 0;
-  background-color: #FCB8B8;
-  color: white;
+  background-color: #F0F0F0;
+  color: var(--text);
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -35,7 +35,8 @@
 }
 
 .card-header.card-header-accent {
-  background-color: #CBDAEB;
+  background-color: var(--pink);
+  color: white;
 }
 
 .card-body {

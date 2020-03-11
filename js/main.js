@@ -17,6 +17,7 @@
 
 // }
 
+var url = window.location.href.split('/').pop().split('.')[0];
 
 var cardItems = [
   {name: 'Illustrator',rate: 80,extension: 'svg'},
@@ -49,9 +50,11 @@ function cardValue(name,rate,extension) {
   return card;
 };
 
-for (var i=0;i<cardItems.length;i++){
-  document.getElementById('cardContainer').insertAdjacentHTML('beforeend', cardValue(cardItems[i].name,cardItems[i].rate,cardItems[i].extension));
-};
+if(url == 'index') {
+  for (var i=0;i<cardItems.length;i++){
+    document.getElementById('cardContainer').insertAdjacentHTML('beforeend', cardValue(cardItems[i].name,cardItems[i].rate,cardItems[i].extension));
+  };
+}
 
 var thumbnailItems = [
   {name: 'freee1weekIntern',extension: 'png',description:'freee株式会社デザイナー',description2:'1weekインターン'},
@@ -64,7 +67,7 @@ var thumbnailItems = [
   {name: 'ultraSole',extension: 'png',description:'IoT×インソール',description2:''},
   {name: 'fasTag',extension: 'png',description:'メモの備わった電子書籍サービス',description2:'FasTag'},
   {name: 'moneyManegement',extension: 'png',description:'家計簿アプリ',description2:''},
-  {name: 'EdelRöteJazzOrchesterHP',extension: 'png',description:'所属バンドのホームページ',description2:''},
+  {name: 'EdelRoteJazzOrchesterHP',extension: 'png',description:'所属バンドのホームページ',description2:''},
   {name: 'freeeIntern',extension: 'png',description:'freee株式会社エンジニア',description2:'2weeksインターン'},
   {name: 'motioCapture',extension: 'png',description:'モーションキャプチャー',description2:'を用いたゲーム製作'},
   {name: 'blockgame',extension: 'png',description:'対戦型ブロックゲーム',description2:''}
@@ -74,41 +77,77 @@ var position;
 var bgColor;
 var num;
 function thumbnailValue(i,name,extension,description,description2) {
-  // if(i % 2 == 0) {
-  //   position = 'upperLeft';
-  // }else {
-  //   position = 'lowerLeft';
-  // }
-  // num = Math.floor(i / 3) + (i % 3);
-  // if (num >= 3) {
-  //   num = num % 3;
-  // }
-  // switch (num){
-  //   case 0:
-  //     bgColor = 'blue';
-  //     break;
-  //   case 1:
-  //     bgColor = 'pink';
-  //     break;
-  //   case 2:
-  //     bgColor = 'lblue';
-  //     break;
-  // }
-
   thumbnail = [
     '<div class="thumbnail">'+
-      // '<div class="thumbnail-foundation '+position+' '+bgColor+'"></div>'+
-      '<img src="./image/thumbnail/'+name+'.'+extension+'" alt="'+description+description2+'" class="thumbnail-img">'+
-      '<div class="thumbnail-mask">'+
-        '<div class="thumbnail-caption">'+
-          description+'<br>'+description2+
+      '<a href="'+name+'.html">'+
+        '<img src="./image/thumbnail/'+name+'.'+extension+'" alt="'+description+description2+'" class="thumbnail-img">'+
+        '<div class="thumbnail-mask">'+
+          '<div class="thumbnail-caption">'+
+            description+'<br>'+description2+
+          '</div>'+
         '</div>'+
-      '</div>'+
+        '</a>'+
     '</div>'
   ];
   return thumbnail;
 };
 
+if(url == 'index') {
+  for (var i=0;i<thumbnailItems.length;i++){
+    document.getElementById('thumbnailContainer').insertAdjacentHTML('beforeend', thumbnailValue(i,thumbnailItems[i].name,thumbnailItems[i].extension,thumbnailItems[i].description,thumbnailItems[i].description2));
+  };
+}
+
+var headComponent;
+var prevWork;
+var nextWork;
+
+function descriptionHeader(name,extension,description,description2) {
+  headComponent = [
+    '<img src="./image/thumbnail/'+name+'.'+extension+'" alt="'+description+description2+'" class="mainVisual">'+
+    '<h1 class="title">'+
+      description+'<br>'+
+      description2+
+    '</h1>'
+  ];
+  return headComponent;
+}
+
+function otherWorks(i) {
+  if(i <= 0 ) {
+    prevWork = [];
+  } else {
+    prevWork = [
+      '<a href="'+thumbnailItems[i-1].name+'.html">'+
+        '<div class="otherWorks-circle left">'+
+          '<div class="otherWorks-arrow left">'+
+          '</div>'+
+        '</div>'+
+        '<img src="./image/thumbnail/'+thumbnailItems[i-1].name+'.'+thumbnailItems[i-1].extension+'" alt="'+thumbnailItems[i-1].description+thumbnailItems[i-1].description2+'">'+
+      '</a>'
+    ];
+  }
+
+  if(i >= thumbnailItems.length - 1) {
+    nextWork = [];
+  } else {
+    nextWork = [
+      '<a href="'+thumbnailItems[i+1].name+'.html">'+
+        '<div class="otherWorks-circle right">'+
+          '<div class="otherWorks-arrow right">'+
+          '</div>'+
+        '</div>'+
+        '<img src="./image/thumbnail/'+thumbnailItems[i+1].name+'.'+thumbnailItems[i+1].extension+'" alt="'+thumbnailItems[i+1].description+thumbnailItems[i+1].description2+'">'+
+      '</a>'
+    ];
+  }
+
+  return '<div class="widthwise">'+prevWork+nextWork+'</div>';
+}
+
 for (var i=0;i<thumbnailItems.length;i++){
-  document.getElementById('thumbnailContainer').insertAdjacentHTML('beforeend', thumbnailValue(i,thumbnailItems[i].name,thumbnailItems[i].extension,thumbnailItems[i].description,thumbnailItems[i].description2));
-};
+  if(url == thumbnailItems[i].name) {
+    document.getElementById('descriptionHeader').insertAdjacentHTML('beforeend', descriptionHeader(thumbnailItems[i].name,thumbnailItems[i].extension,thumbnailItems[i].description,thumbnailItems[i].description2));
+    document.getElementById('otherWorksContainer').insertAdjacentHTML('beforeend', otherWorks(i));
+  }
+}

@@ -23,9 +23,10 @@
 html, body {
   margin: 0 auto;
   width: 100vw;
-  /* background-color: #FCFCFC; */
+  background-color: #FCFCFC;
   color: #464646;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 a {
@@ -42,7 +43,14 @@ p {
 }
 
 .letter-accent {
+  font-weight: bold;
   background: linear-gradient(#fff 70%,#ffe243 0);
+}
+
+.product-link {
+  border-bottom: 1px solid var(--dblue);
+  color: var(--blue);
+  font-weight: bold;
 }
 
 .widthwise {

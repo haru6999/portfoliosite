@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ごとうはるかのポートフォリオサイト</title>
+    <meta name="keywords" content="ポートフォリオサイト,ポートフォリオ" />
+    <meta name="description" content="ごとうはるかのポートフォリオサイト" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/icon.png">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <link href="./css/card.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="headerIcon">
+      <a href="./index.html#works">
+        <img src="./image/toTop.png" alt="top">
+      </a>
+    </div>
+    <div id="descriptionHeader"></div>
+    <section class="content">
+      <h2>概要</h2>
+      <p>freee株式会社の既存サービス「人事労務freee」を<br>
+        ・いまより入力が効率化されること<br>
+        ・いまより入力漏れや入力遅延が減ること<br>
+        ・その結果、正しくほぼリアルタイムに入力されるようになること<br>
+        を目的とした改善案を検討しました。
+      </p>
+      <h2>使用ツール</h2>
+      <p>XD</p>
+      <h2>既存サービス</h2>
+      <p class="widthwise img">
+        <img src="./image/freee1day-1.jpg">
+        <img src="./image/freee1day-2.png">
+        <img src="./image/freee1day-3.png">
+      </p>
+      <h2>作成過程</h2>
+      <p>実際に使用して見たところ入力漏れをした時の修正が複雑でわかりづらかったので、入力漏れの修正をわかりやすくするような改善案を考えました。</p>
+      <h3>ワイヤー</h3>
+      <p class="widthwise img"><img src="./image/freee1day-4.png"></p>
+      <p>・ホーム（打刻）画面に今週の未入力の勤怠があることを伝える<br>
+        ・カレンダー画面でいつ入力できていないのかをわかりやすく明示する<br>
+      </p>
+      <h3>改善案</h3>
+      <p class="widthwise img">
+        <img src="./image/freee1day-5.png">
+        <img src="./image/freee1day-6.png">
+        <img src="./image/freee1day-7.png">
+      </p>
+      <p>
+        ・入力漏れを気づかせるために、打刻の画面で、目立つように「記入漏れがあります」と表示した。<br>
+        ・勤怠の画面にいかなくても、打刻の画面で出勤時刻の修正ができるようにした。<br>
+        ・カレンダーを見て、入力できてない日が、ひとめで分かるようにした。<br>
+        ・入力できてない日があれば、フッターの勤怠の部分に、目立つようにオレンジの点で表示した
+      </p>
+      <h2>ユーザーテストととその後</h2>
+      <p>
+        ユーザーテストでは以下のような事象がありました。<br>
+        ・最初の出勤画面で手が止まる<br>
+        ・未入力のアラートに気を取られる<br>
+        ・打刻ができているのかわからなかった<br>
+        ・<span class="letter-accent">「未入力」のボタンをメッセージだと間違われて押してもらえなかった</span><br>
+        ・<span class="letter-accent">カレンダーを見て、未入力の日がわからない</span><br>
+        ・背景色など色による印象が薄い、読みづらい<br>
+        ・「保存」ボタンが押しづらい<br>
+        ・「保存」ボタンが押せているのかわからない
+      </p>
+      <p>カレンダーを見て未入力の日がわからないことは、既に入力済みの表示がない</span>ことが原因と考えました。<br>
+        そしてこれは、勤怠未記入だけでなく既に勤怠入力済みの印を追加することで改善されると考えました。
+      </p>
+      <p>また、未登録のボタンが有ることで打刻ができていないのではないのかと思われたことは、<span class="letter-accent">打刻のフィードバックがないこと</span>、<span class="letter-accent">未登録のボタンが打刻とセットに見えたこと</span>が原因だと考えました。<br>
+        そしてこれは、現状だけを伝えているボタンの文言の変更（具体的には未登録の勤怠を入力する）や、未登録のお知らせはメッセージとして表示することで改善される。
+      </p>
+    </section>
+    <div id="otherWorks">
+      <p>OTHER WORKS</p>
+      <div id="otherWorksContainer"></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

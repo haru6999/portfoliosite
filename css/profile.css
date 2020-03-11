@@ -71,7 +71,19 @@
 }
 
 @media screen and (max-width:480px) {
+  .profile-text p {
+    text-align: center;
+  }
+
   #profile .widthwise .button {
     width: 40%;
+  }
+
+  .button.github {
+    background-color: #1d1b1b;
+  }
+  
+  .button.note {
+    background-color: #4ac7b3;
   }
 }
