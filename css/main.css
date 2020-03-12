@@ -43,7 +43,8 @@ header .nav-list {
 
 /* footer */
 footer p {
-  color: white;
+  color: black;
+  font-weight: bold;
   background-color: var(--blue);
   text-align: center;
   padding: 10px 0;
@@ -192,18 +193,18 @@ footer p {
 }
 
 /* works詳細 */
-.content h2 {
+section.content h2 {
   font-size: 20px;
   padding-left: 25px;
   margin: 70px 0 10px;
   position: relative;
 }
 
-.content h2:first-of-type {
+section.content h2:first-of-type {
   margin-top: 0;
 }
 
-.content h2:before {
+section.content h2:before {
   content: '';
   position: absolute;
   width: 20px;
@@ -215,14 +216,14 @@ footer p {
   background-color: var(--pink);
 }
 
-.content h3 {
+section.content h3 {
   font-size: 18px;
   padding-left: 25px;
   margin: 30px 0 10px;
   position: relative;
 }
 
-.content h3:before {
+section.content h3:before {
   content: '';
   position: absolute;
   width: 5px;
@@ -233,29 +234,29 @@ footer p {
   background-color: var(--text);
 }
 
-.content p {
+section.content p {
   margin: 0 0 20px 20px;
   line-height: 1.6em;
 }
 
-.content .img.widthwise {
+section.content .img.widthwise {
   justify-content: flex-start;
   height: 400px;
 }
 
-.content .img.widthwise.img-small {
+section.content .img.widthwise.img-small {
   justify-content: flex-start;
   height: 100px;
 }
 
-.content .img.widthwise img {
+section.content .img.widthwise img {
   width: auto;
   height: 100%;
   object-fit: contain;
   margin-left: 50px;
 }
 
-.content .img.widthwise img:first-of-type {
+section.content .img.widthwise img:first-of-type {
   margin-left: 0;
 }
 

@@ -1,22 +1,3 @@
-
-// var skillRateText = document.getElementsByClassName('card-text-detail');
-// var skillIllustRate = document.getElementsByClassName('card-illust-rate');
-// var num = skillRateText.length;
-// var skillRate = new Array(num);
-
-// var cssTemplate = '<style type="text/css">.card-illust-rate:before{transform: rotate(150deg);}</style>';
-// var css = cssTemplate.replace('150', '10');
-
-// for (var i=0 ;i<num;i++) {
-//   skillRate[i] = skillRateText[i].textContent.substr( 0, 2 );
-//   // skillIllustRate[i].replace(css);
-//   skillIllustRate[i].getAttribute('deg', parseInt(skillIllustRate[i].getAttribute('rotate(20deg)')));
-// };
-
-// for (var i=10 ;i<=100;i++) {
-
-// }
-
 var url = window.location.href.split('/').pop().split('.')[0];
 
 var cardItems = [
