@@ -131,5 +131,4 @@
       document.getElementById('otherWorksContainer').insertAdjacentHTML('beforeend', otherWorks(i));
     }
   }
-  init();
 })();
