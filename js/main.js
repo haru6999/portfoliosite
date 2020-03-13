@@ -1,4 +1,4 @@
-(function () {
+window.onload = function() {
   var url = window.location.href.split('/').pop().split('.')[0];
 
   var cardItems = [
@@ -131,4 +131,4 @@
       document.getElementById('otherWorksContainer').insertAdjacentHTML('beforeend', otherWorks(i));
     }
   }
-})();
+}

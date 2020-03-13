@@ -1,4 +1,4 @@
-(function () {
+window.onload = function() {
 
   var unit = 100,
     canvas, context, canvas2, context2, canvas3, context3, canvas4, context4,
@@ -110,4 +110,4 @@
     }
   }
   init();
-})();
+}
