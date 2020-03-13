@@ -1,22 +1,3 @@
-
-// var skillRateText = document.getElementsByClassName('card-text-detail');
-// var skillIllustRate = document.getElementsByClassName('card-illust-rate');
-// var num = skillRateText.length;
-// var skillRate = new Array(num);
-
-// var cssTemplate = '<style type="text/css">.card-illust-rate:before{transform: rotate(150deg);}</style>';
-// var css = cssTemplate.replace('150', '10');
-
-// for (var i=0 ;i<num;i++) {
-//   skillRate[i] = skillRateText[i].textContent.substr( 0, 2 );
-//   // skillIllustRate[i].replace(css);
-//   skillIllustRate[i].getAttribute('deg', parseInt(skillIllustRate[i].getAttribute('rotate(20deg)')));
-// };
-
-// for (var i=10 ;i<=100;i++) {
-
-// }
-
 var url = window.location.href.split('/').pop().split('.')[0];
 
 var cardItems = [
@@ -66,9 +47,9 @@ var thumbnailItems = [
   {name: 'schoolFestivalSite',extension: 'png',description:'学祭学外向けサイト',description2:''},
   {name: 'ultraSole',extension: 'png',description:'IoT×インソール',description2:''},
   {name: 'fasTag',extension: 'png',description:'メモの備わった電子書籍サービス',description2:'FasTag'},
+  {name: 'freeeIntern',extension: 'png',description:'freee株式会社エンジニア',description2:'2weeksインターン'},
   {name: 'moneyManegement',extension: 'png',description:'家計簿アプリ',description2:''},
   {name: 'EdelRoteJazzOrchesterHP',extension: 'png',description:'所属バンドのホームページ',description2:''},
-  {name: 'freeeIntern',extension: 'png',description:'freee株式会社エンジニア',description2:'2weeksインターン'},
   {name: 'motioCapture',extension: 'png',description:'モーションキャプチャー',description2:'を用いたゲーム製作'},
   {name: 'blockgame',extension: 'png',description:'対戦型ブロックゲーム',description2:''}
 ];
@@ -120,8 +101,7 @@ function otherWorks(i) {
     prevWork = [
       '<a href="'+thumbnailItems[i-1].name+'.html">'+
         '<div class="otherWorks-circle left">'+
-          '<div class="otherWorks-arrow left">'+
-          '</div>'+
+        '＜<br>previous'+
         '</div>'+
         '<img src="./image/thumbnail/'+thumbnailItems[i-1].name+'.'+thumbnailItems[i-1].extension+'" alt="'+thumbnailItems[i-1].description+thumbnailItems[i-1].description2+'">'+
       '</a>'
@@ -134,8 +114,7 @@ function otherWorks(i) {
     nextWork = [
       '<a href="'+thumbnailItems[i+1].name+'.html">'+
         '<div class="otherWorks-circle right">'+
-          '<div class="otherWorks-arrow right">'+
-          '</div>'+
+        '＞<br>next'+
         '</div>'+
         '<img src="./image/thumbnail/'+thumbnailItems[i+1].name+'.'+thumbnailItems[i+1].extension+'" alt="'+thumbnailItems[i+1].description+thumbnailItems[i+1].description2+'">'+
       '</a>'
