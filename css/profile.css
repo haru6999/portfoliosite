@@ -3,6 +3,7 @@
 }
 
 #profile p,
+#profile span,
 #profile td {
   color: white;
 }
@@ -24,12 +25,16 @@
 }
 
 .profile-text p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
 .profile-text .profile-text-name {
   font-size: 40px;
+}
+
+#profile .profile-accent {
+  background: linear-gradient(var(--blue) 90%,#ffe243 0);
 }
 
 .profile-text table tr td:first-child {
