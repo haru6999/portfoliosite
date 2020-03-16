@@ -10,6 +10,7 @@
     {name: 'css設計',rate: 70,extension: 'jpg'},
     {name: 'Javascript',rate: 60,extension: 'svg'},
     {name: 'jQuery',rate: 60,extension: 'svg'},
+    {name: 'git',rate: 90,extension: 'png'},
     {name: 'Rails',rate: 10,extension: 'svg'},
     {name: 'Unity',rate: 10,extension: 'svg'},
     {name: 'Processing',rate: 20,extension: 'png'},
