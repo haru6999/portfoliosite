@@ -70,6 +70,10 @@ footer p {
   justify-content: space-around;
 }
 
+#otherWorks .half > * {
+  width: 48%;
+}
+
 #otherWorks p {
   text-align: center;
   font-size: 40px;
@@ -137,7 +141,6 @@ footer p {
 }
 
 /* content */
-
 .content {
   padding: 0 12% 50px;
 }
@@ -152,7 +155,7 @@ footer p {
 
 #descriptionHeader{
   width: 50%;
-  margin: 20px auto 40px;
+  margin: 50px auto 40px;
 }
 
 #descriptionHeader .mainVisual {
@@ -214,107 +217,6 @@ section.content p {
   line-height: 1.6em;
 }
 
-
-
-.widthwise {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.widthwise img {
-  width: 200px;
-  height: 100%;
-  object-fit: contain;
-  margin: 0 50px 20px 0;
-  border: solid 1px #eee;
-}
-
-.widthwise img:last-of-type {
-  margin-right: 0;
-}
-
-.widthwise.oblong img {
-  width: 450px;
-}
-
-.widthwise.full > * {
-  width: 100%;
-  height: 30vw;
-  object-fit: contain;
-}
-
-
-
-.widthwise.img-small {
-  justify-content: flex-start;
-  height: 100px;
-}
-
-.widthwise.img-medium {
-  justify-content: flex-start;
-  height: 150px;
-}
-
-.widthwise.img-large {
-  justify-content: flex-start;
-  height: 200px;
-}
-
-.widthwise.img-full {
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.widthwise.img-full > * {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* section.content .img.widthwise {
-  justify-content: flex-start;
-  height: 400px;
-}
-
-section.content .img.widthwise.img-small {
-  justify-content: flex-start;
-  height: 100px;
-}
-
-section.content .img.widthwise.img-medium {
-  justify-content: flex-start;
-  height: 150px;
-}
-
-section.content .img.widthwise.img-large {
-  justify-content: flex-start;
-  height: 200px;
-}
-
-section.content .img.widthwise.img-full {
-  justify-content: flex-start;
-  width: 100%;
-}
-
-section.content .img.widthwise.img-full > * {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-
-}
-
-section.content .img.widthwise img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  margin-left: 50px;
-}
-
-section.content .img.widthwise img:first-of-type {
-  margin-left: 0;
-} */
-
 @media screen and (max-width:480px) {
   header {
     height: 30px;
@@ -348,5 +250,9 @@ section.content .img.widthwise img:first-of-type {
 
   .widthwise.oblong img {
     width: 100%;
+  }
+
+  #otherWorks {
+    padding: 20px 10%;
   }
 }

@@ -67,21 +67,17 @@
   margin: 0 auto;
 }
 
-#profile .widthwise {
+#profile .half {
   justify-content: space-around;
 }
 
-#profile .widthwise .button {
+#profile .half .button {
   width: 40%;
 }
 
 @media screen and (max-width:480px) {
   .profile-text p {
     text-align: center;
-  }
-
-  #profile .widthwise .button {
-    width: 40%;
   }
 
   .button.github {
