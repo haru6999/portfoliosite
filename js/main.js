@@ -123,7 +123,7 @@
       ];
     }
 
-    return '<div class="widthwise">'+prevWork+nextWork+'</div>';
+    return '<div class="half">'+prevWork+nextWork+'</div>';
   }
 
   var pageNum;

@@ -66,7 +66,7 @@ footer p {
   margin-bottom: 20px;
 }
 
-#otherWorks .widthwise {
+#otherWorks .half {
   justify-content: space-around;
 }
 
@@ -214,7 +214,65 @@ section.content p {
   line-height: 1.6em;
 }
 
-section.content .img.widthwise {
+
+
+.widthwise {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.widthwise img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 50px 20px 0;
+  border: solid 1px #eee;
+}
+
+.widthwise img:last-of-type {
+  margin-right: 0;
+}
+
+.widthwise.oblong img {
+  width: 450px;
+}
+
+.widthwise.full > * {
+  width: 100%;
+  height: 30vw;
+  object-fit: contain;
+}
+
+
+
+.widthwise.img-small {
+  justify-content: flex-start;
+  height: 100px;
+}
+
+.widthwise.img-medium {
+  justify-content: flex-start;
+  height: 150px;
+}
+
+.widthwise.img-large {
+  justify-content: flex-start;
+  height: 200px;
+}
+
+.widthwise.img-full {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.widthwise.img-full > * {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* section.content .img.widthwise {
   justify-content: flex-start;
   height: 400px;
 }
@@ -255,7 +313,7 @@ section.content .img.widthwise img {
 
 section.content .img.widthwise img:first-of-type {
   margin-left: 0;
-}
+} */
 
 @media screen and (max-width:480px) {
   header {
@@ -277,6 +335,18 @@ section.content .img.widthwise img:first-of-type {
   }
 
   #descriptionHeader{
+    width: 100%;
+  }
+
+  .widthwise {
+    justify-content: center;
+  }
+
+  .widthwise img {
+    margin: 0 0 20px 0;
+  }
+
+  .widthwise.oblong img {
     width: 100%;
   }
 }

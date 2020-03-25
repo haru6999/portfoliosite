@@ -53,22 +53,22 @@ p {
   font-weight: bold;
 }
 
-.widthwise {
+.half {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.widthwise > * {
+.half > * {
   width: 48%;
 }
-
-.widthwise.align-center {
+/* 
+.half.align-center {
   align-items: center;
-}
+} */
 
 @media screen and (max-width:480px) {
-  .widthwise > * {
+  .half > * {
     width: 100%;
   }
 }
