@@ -126,10 +126,21 @@
     return '<div class="widthwise">'+prevWork+nextWork+'</div>';
   }
 
+  var pageNum;
   for (var i=0;i<thumbnailItems.length;i++){
     if(url == thumbnailItems[i].name) {
+      pageNum=i;
       document.getElementById('descriptionHeader').insertAdjacentHTML('beforeend', descriptionHeader(thumbnailItems[i].name,thumbnailItems[i].extension,thumbnailItems[i].description,thumbnailItems[i].description2));
       document.getElementById('otherWorksContainer').insertAdjacentHTML('beforeend', otherWorks(i));
+      // クリックでページ遷移
+      document.onkeydown = function (e){
+        if(!e) e = window.event;
+        if(pageNum<thumbnailItems.length-1 && e.keyCode == 39) {
+          window.location.href = './'+thumbnailItems[pageNum+1].name+'.html';
+        } else if(pageNum>0 && e.keyCode == 37) {
+          window.location.href = './'+thumbnailItems[pageNum-1].name+'.html';
+        }
+      };
     }
   }
 })();
