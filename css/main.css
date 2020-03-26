@@ -141,11 +141,13 @@ footer p {
 }
 
 /* content */
-.content {
+.content,
+#content {
   padding: 0 12% 50px;
 }
 
-.content-header {
+.content-header,
+#content-header {
   font-family: 'Phenomena-Bold';
   font-size: 50px;
   letter-spacing: 0.2em;
@@ -171,18 +173,18 @@ footer p {
 }
 
 /* works詳細 */
-section.content h2 {
+section#content h2 {
   font-size: 20px;
   padding-left: 25px;
   margin: 60px 0 10px;
   position: relative;
 }
 
-section.content h2:first-of-type {
+section#content h2:first-of-type {
   margin-top: 0;
 }
 
-section.content h2:before {
+section#content h2:before {
   content: '';
   position: absolute;
   width: 20px;
@@ -194,14 +196,14 @@ section.content h2:before {
   background-color: var(--pink);
 }
 
-section.content h3 {
+section#content h3 {
   font-size: 18px;
   padding-left: 25px;
   margin: 30px 0 10px;
   position: relative;
 }
 
-section.content h3:before {
+section#content h3:before {
   content: '';
   position: absolute;
   width: 5px;
@@ -212,9 +214,47 @@ section.content h3:before {
   background-color: var(--text);
 }
 
-section.content p {
+section#content p {
   margin: 0 0 20px 20px;
   line-height: 1.6em;
+}
+
+#balloon {
+  position: absolute;
+  margin: 60px 0 0 0;
+  padding: 0.6em;
+  width: 200px;
+  background: var(--lblue);
+  opacity: .8;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+  font-size: 14px;
+  text-align: center;
+  transition: .3s ease-in-out;
+}
+
+#balloon:after {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid rgba(224,241,252,.8);
+  width: 0;
+  height: 0;
+}
+
+#balloon.is-hide {
+  opacity: 0;
+}
+
+@keyframes hide{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -232,7 +272,8 @@ section.content p {
     font-size: 100%;
   }
 
-  .content {
+  .content,
+  #content {
     padding: 0 8%;
   }
 
@@ -254,5 +295,9 @@ section.content p {
 
   #otherWorks {
     padding: 20px 10%;
+  }
+
+  #balloon {
+    display: none;
   }
 }

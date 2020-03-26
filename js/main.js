@@ -143,4 +143,13 @@
       };
     }
   }
+  window.addEventListener( "scroll", function () {
+  if(url == thumbnailItems[0].name) {
+    if(document.documentElement.scrollTop < document.getElementById('content').offsetTop) {
+      document.getElementById('balloon').classList.remove('is-hide');
+    } else {
+      document.getElementById('balloon').classList.add('is-hide');
+    }
+  }
+});
 })();
