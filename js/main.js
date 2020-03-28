@@ -41,15 +41,15 @@
 
   var thumbnailItems = [
     {name: 'freee1weekIntern',extension: 'png',description:'freee株式会社デザイナー',description2:'1weekインターン'},
-    {name: 'freee1dayIntern',extension: 'png',description:'freee株式会社デザイナー',description2:'1dayインターン'},
     {name: 'a-teamIntern',extension: 'png',description:'株式会社エイチームデザイナー',description2:'3daysインターン'},
+    {name: 'freeeIntern',extension: 'png',description:'freee株式会社エンジニア',description2:'2weeksインターン'},
     {name: 'portfoliosite',extension: 'png',description:'ポートフォリオサイト',description2:''},
+    {name: 'ultraSole',extension: 'png',description:'IoT×インソール',description2:''},
+    {name: 'freee1dayIntern',extension: 'png',description:'freee株式会社デザイナー',description2:'1dayインターン'},
     {name: 'schoolFestivalPreSite',extension: 'png',description:'学祭学内向けプレサイト',description2:''},
     {name: 'diagnosticChart',extension: 'png',description:'学祭学内向け診断チャート',description2:''},
     {name: 'schoolFestivalSite',extension: 'png',description:'学祭学外向けサイト',description2:''},
-    {name: 'ultraSole',extension: 'png',description:'IoT×インソール',description2:''},
     {name: 'fasTag',extension: 'png',description:'メモの備わった電子書籍サービス',description2:'FasTag'},
-    {name: 'freeeIntern',extension: 'png',description:'freee株式会社エンジニア',description2:'2weeksインターン'},
     {name: 'moneyManegement',extension: 'png',description:'家計簿アプリ',description2:''},
     {name: 'EdelRoteJazzOrchesterHP',extension: 'png',description:'所属バンドのホームページ',description2:''},
     {name: 'motioCapture',extension: 'png',description:'モーションキャプチャー',description2:'を用いたゲーム製作'},
